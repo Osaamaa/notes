@@ -5,7 +5,9 @@ import '../models/note_model.dart';
 
 class NoteItem extends StatelessWidget {
   const NoteItem({super.key, required this.note});
+
   final NoteModel note;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +19,7 @@ class NoteItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ListTile(
-            title:  Text(
+            title: Text(
               note.title,
               style: TextStyle(color: Colors.black, fontSize: 26),
             ),
@@ -36,7 +38,7 @@ class NoteItem extends StatelessWidget {
                 size: 24,
               ),
               onPressed: () {
-                print("hello");
+                note.delete();
               },
             ),
           ),
@@ -45,7 +47,7 @@ class NoteItem extends StatelessWidget {
             child: Text(
               note.date,
               style:
-              TextStyle(color: Colors.black.withOpacity(.5), fontSize: 16),
+                  TextStyle(color: Colors.black.withOpacity(.5), fontSize: 16),
             ),
           ),
         ],
