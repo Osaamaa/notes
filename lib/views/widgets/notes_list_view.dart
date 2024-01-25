@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/views/widgets/edit_note_view.dart';
+import 'package:notes_app/views/edit_note_view.dart';
 
 import '../../core/componats.dart';
 import 'custom_note_item.dart';
