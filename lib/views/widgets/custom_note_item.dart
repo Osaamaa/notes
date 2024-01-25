@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class NoteItem extends StatelessWidget {
-  const NoteItem({super.key});
+import '../models/note_model.dart';
 
+class NoteItem extends StatelessWidget {
+  const NoteItem({super.key, required this.note});
+  final NoteModel note;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,14 +17,14 @@ class NoteItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ListTile(
-            title: const Text(
-              "Flutter Tips",
+            title:  Text(
+              note.title,
               style: TextStyle(color: Colors.black, fontSize: 26),
             ),
             subtitle: Padding(
               padding: const EdgeInsets.symmetric(vertical: 16),
               child: Text(
-                "build your carrer with osos",
+                note.subTitle,
                 style: TextStyle(
                     color: Colors.black.withOpacity(.5), fontSize: 18),
               ),
@@ -41,7 +43,7 @@ class NoteItem extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 24),
             child: Text(
-              "May 21,2022",
+              note.date,
               style:
               TextStyle(color: Colors.black.withOpacity(.5), fontSize: 16),
             ),

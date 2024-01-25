@@ -27,7 +27,7 @@ class NotesListView extends StatelessWidget {
                     onTap: () {
                       navigateTo(context, const EditNoteView());
                     },
-                    child: const NoteItem()),
+                    child:  NoteItem(note: notes[index],)),
               );
             });
       },
