@@ -11,11 +11,11 @@ class CustomAppBar extends StatelessWidget {
     return const Row(
       children: [
         SizedBox(
-          height: 50,
+          height: 60,
         ),
         Text(
-          'Notes',style:Styles.style28,
-
+          'Notes',
+          style: Styles.style28,
         ),
         Spacer(),
         CustomSearchIcon(),
